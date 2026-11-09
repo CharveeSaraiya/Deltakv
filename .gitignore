@@ -1,38 +1,27 @@
-# Large local artifacts (do not push)
-models/
-checkpoints/
-data/
-outputs/
-results/longbench/*.jsonl
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# local secrets
+.env
+.env.*
+huggingface_token*
+gh_token*
+
+# large runtime artifacts
+**/models/
+**/checkpoints/
+298a-kv-cache-compression/results/residualkv/
+298a-kv-cache-compression/residualkv.log
 *.safetensors
 *.bin
 *.pt
 *.pth
 *.ckpt
-
-# Python / env
-.venv/
-venv/
-__pycache__/
-*.pyc
-.pytest_cache/
-.mypy_cache/
-*.egg-info/
-dist/
-build/
-
-# IDE / OS
-.DS_Store
-.idea/
-.vscode/
-*.swp
-
-# Secrets / local env
-.env
-.env.*
-*.pem
-huggingface_token*
-gh_token*
-
-# Nested git metadata from upstream clone (repo is flat)
-DeltaKV/.git/
+*.tgz
+charvee_residualkv.zip
